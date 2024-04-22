@@ -114,7 +114,12 @@ function dead() {
 function moveup() {
     if (map[player_poss[0] - 1][player_poss[1]] == " ") {
         map[player_poss[0] - 1][player_poss[1]] = "p"
-        map[player_poss[0]][player_poss[1]] = " "
+        if (onlader == true) {
+            map[player_poss[0]][player_poss[1]] = "="
+        } else {
+            map[player_poss[0]][player_poss[1]] = " "
+        }
+        onlader = false
         drawmap()
         moveup()
     } else if (map[player_poss[0] - 1][player_poss[1]] == "f") {
