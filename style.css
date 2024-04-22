@@ -9,7 +9,7 @@
     --body_bgc: rgb(255, 183, 255);
     --black: black;
     --white: white;
-    --fontsize: 37px;
+    --fontsize: 26px;
 }
 
 /* :root {
@@ -67,7 +67,6 @@ header {
 
 .block_home {
     width: 70%;
-    height: 50px;
     background-color: var(--body_bgc);
     margin: 0 auto 20px auto;
     border: 1px solid var(--color);
@@ -87,15 +86,16 @@ header {
 
 #reest {
     width: 45%;
+    min-height: 140px;
     background-color: var(--body_bgc);
     border: 1px solid var(--color);
 }
 
 #go {
     width: 100%;
-    padding: 40px 0;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
@@ -103,7 +103,7 @@ header {
 .goplay {
     background-color: var(--body_bgc);
     text-align: center;
-    height: 32px;
+    margin-top: 12px;
 }
 
 #first {
@@ -112,13 +112,13 @@ header {
     color: white;
     margin-top: 20px;
     width: 80%;
-    height: 32px;
 }
 
 .a {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 12px;
 }
 
 /* block */
@@ -227,4 +227,27 @@ footer {
 .onk button {
     height: calc(150px/3);
     width: calc(150px/3);
+}
+
+@media screen and (width < 768px){
+    :root {
+        --fontsize: 22px;
+    }
+    header {
+        width: 100%;
+    }
+    .sell-content{
+        width: 90%;
+    }
+
+    #starnum{
+        margin: 60px;
+    }
+    #coinnum {
+        margin: 80px;
+    }
+
+    footer {
+        width: 100%;
+    }
 }
